@@ -9,13 +9,24 @@ namespace compiler_of_c.Lexical_Analyzer
 {
     class Buffer : IBuffer
     {
-        private List<string> Items = new List<string>();
+        private List<char> Items = new List<char>();
+
+        public void Add(char character)
+        {
+            this.Items.Add(character);
+        }
+
+        public string GetString()
+        {
+            return string.Join("", Items);
+        }
+
         public void ClearBuffer()
         {
             this.Items.Clear();
         }
 
-        public string GetItem(int i)
+        public char GetItem(int i)
         {
             if(ItemExists(i))
             {
@@ -27,7 +38,7 @@ namespace compiler_of_c.Lexical_Analyzer
             }
         }
 
-        public string GetLastItem()
+        public char GetLastItem()
         {
             if(this.Items.Count == 0)
             {
@@ -41,7 +52,7 @@ namespace compiler_of_c.Lexical_Analyzer
 
         public bool ItemExists(int i)
         {
-            string itemtoretur;
+            char itemtoretur;
             try
             {
                 itemtoretur = this.Items[i];

@@ -20,6 +20,9 @@ namespace compiler_of_c.Utility
             S.Add(new State("Not Yet Identified", 0));
             S.Add(new State("Condition", 0));
             S.Add(new State("Done", 0));
+            S.Add(new State("punctuation", 0));
+            S.Add(new State("TrueFalse", 0));
+            
         }
 
         public static void ResetProiority()

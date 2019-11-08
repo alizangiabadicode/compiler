@@ -23,5 +23,6 @@ namespace compiler_of_c.Lexical_Analyzer
             if (o.Name == this.Name) return true;
             else return false;
         }
+        public string Value { get; set; }
     }
 }

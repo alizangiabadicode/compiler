@@ -8,9 +8,10 @@ namespace compiler_of_c.Lexical_Analyzer
 {
     interface IBuffer
     {
-        string GetLastItem();
-        string GetItem(int i);
+        char GetLastItem();
+        char GetItem(int i);
         void ClearBuffer();
         bool ItemExists(int i);
+        void Add(char character);
     }
 }

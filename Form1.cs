@@ -1,4 +1,5 @@
-﻿using System;
+﻿using compiler_of_c.Lexical_Analyzer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace compiler_of_c
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Analyze analyze = new Analyze();
+            analyze.Start("char", label1);
         }
     }
 }
